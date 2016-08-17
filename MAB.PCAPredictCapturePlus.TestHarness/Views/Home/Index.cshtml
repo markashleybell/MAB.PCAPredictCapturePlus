@@ -18,3 +18,30 @@
         }
     </div>
 </div>
+
+@section scripts {
+
+<div class="mab-pca-predict-capture-plus-suggestions"></div>
+
+<script type="text/javascript">
+    var options = {
+        test: 232,
+        fields: {
+            Company: { input: "Company", search: true },
+            BuildingName: { input: "BuildingName", search: true },
+            Street: { input: "Street", search: true },
+            Line1: { input: "Line1" },
+            Line2: { input: "Line2" },
+            Line3: { input: "Line3" },
+            Line4: { input: "Line4" },
+            Line5: { input: "Line5" },
+            City: { input: "City" },
+            County: { input: "County" },
+            Postcode: { input: "Postcode", search: true }
+        }
+    };
+
+    App.init(options);
+</script>
+
+}

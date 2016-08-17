@@ -22,11 +22,13 @@ namespace MAB.PCAPredict.TestHarness.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Find(string term)
         {
             return Json(_client.Find(term));
         }
 
+        [HttpPost]
         public ActionResult Retrieve(string id)
         {
             var result = _client.Retrieve(id);
