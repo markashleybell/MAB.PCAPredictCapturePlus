@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MAB.PCAPredict
+namespace MAB.PCAPredictCapturePlus
 {
-    public class PCAPredictFindResult
+    public class PCAPredictCapturePlusFindResult
     {
         public string Id { get; set; }
         public string Text { get; set; }

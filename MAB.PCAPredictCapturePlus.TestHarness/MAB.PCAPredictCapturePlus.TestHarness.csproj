@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MAB.PCAPredict.TestHarness</RootNamespace>
-    <AssemblyName>MAB.PCAPredict.TestHarness</AssemblyName>
+    <RootNamespace>MAB.PCAPredictCapturePlus.TestHarness</RootNamespace>
+    <AssemblyName>MAB.PCAPredictCapturePlus.TestHarness</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -182,7 +182,7 @@
     <Content Include="Scripts\jquery-3.1.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MAB.PCAPredict\MAB.PCAPredict.csproj">
+    <ProjectReference Include="..\MAB.PCAPredictCapturePlus\MAB.PCAPredictCapturePlus.csproj">
       <Project>{44AB6E2A-6DCB-4549-9609-F15D9478A02F}</Project>
       <Name>MAB.PCAPredict</Name>
     </ProjectReference>

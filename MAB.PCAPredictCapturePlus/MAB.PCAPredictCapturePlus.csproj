@@ -7,8 +7,8 @@
     <ProjectGuid>{44AB6E2A-6DCB-4549-9609-F15D9478A02F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MAB.PCAPredict</RootNamespace>
-    <AssemblyName>MAB.PCAPredict</AssemblyName>
+    <RootNamespace>MAB.PCAPredictCapturePlus</RootNamespace>
+    <AssemblyName>MAB.PCAPredictCapturePlus</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PCAPredictClient.cs" />
-    <Compile Include="PCAPredictFindResult.cs" />
-    <Compile Include="PCAPredictFindResultList.cs" />
-    <Compile Include="PCAPredictRetrieveResult.cs" />
-    <Compile Include="PCAPredictRetrieveResultList.cs" />
+    <Compile Include="PCAPredictCapturePlusClient.cs" />
+    <Compile Include="PCAPredictCapturePlusFindResult.cs" />
+    <Compile Include="PCAPredictCapturePlusFindResultList.cs" />
+    <Compile Include="PCAPredictCapturePlusRetrieveResult.cs" />
+    <Compile Include="PCAPredictCapturePlusRetrieveResultList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchFor.cs" />
   </ItemGroup>

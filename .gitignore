@@ -257,4 +257,4 @@ paket-files/
 
 # Project-specific ignores
 REPL.config
-MAB.PCAPredict.TestHarness/Web.config
+MAB.PCAPredictCapturePlus.TestHarness/Web.config

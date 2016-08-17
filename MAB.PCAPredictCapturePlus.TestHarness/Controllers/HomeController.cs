@@ -1,4 +1,4 @@
-﻿using MAB.PCAPredict;
+﻿using MAB.PCAPredictCapturePlus;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +10,7 @@ namespace MAB.PCAPredict.TestHarness.Controllers
 {
     public class HomeController : Controller
     {
-        private PCAPredictClient _client = new PCAPredictClient(
+        private PCAPredictCapturePlusClient _client = new PCAPredictCapturePlusClient(
             apiVersion: "2.10",
             key: ConfigurationManager.AppSettings["PCAPredictKey"],
             defaultFindCountry: "GBR",

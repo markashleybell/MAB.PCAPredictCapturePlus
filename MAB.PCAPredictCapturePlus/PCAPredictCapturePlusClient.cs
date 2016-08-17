@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MAB.PCAPredict
+namespace MAB.PCAPredictCapturePlus
 {
-    public class PCAPredictClient
+    public class PCAPredictCapturePlusClient
     {
         private string _apiVersion;
         private string _key;
@@ -15,7 +15,7 @@ namespace MAB.PCAPredict
         private string _defaultFindCountry;
         private string _defaultLanguage;
     
-        public PCAPredictClient(string apiVersion, string key, string defaultFindCountry, string defaultLanguage)
+        public PCAPredictCapturePlusClient(string apiVersion, string key, string defaultFindCountry, string defaultLanguage)
         {
             _apiVersion = apiVersion;
             _key = key;
@@ -24,27 +24,27 @@ namespace MAB.PCAPredict
             _defaultLanguage = defaultLanguage;
         }
     
-        public List<PCAPredictFindResult> Find(string term)
+        public List<PCAPredictCapturePlusFindResult> Find(string term)
         {
             return Find(term, SearchFor.Everything);
         }
 
-        public List<PCAPredictFindResult> Find(string term, SearchFor searchFor)
+        public List<PCAPredictCapturePlusFindResult> Find(string term, SearchFor searchFor)
         {
             return Find(term, searchFor, _defaultFindCountry, _defaultLanguage);
         }
 
-        public List<PCAPredictFindResult> Find(string term, SearchFor searchFor, string country, string languagePreference)
+        public List<PCAPredictCapturePlusFindResult> Find(string term, SearchFor searchFor, string country, string languagePreference)
         {
             return Find(term, null, searchFor, country, languagePreference, null, null);
         }
 
-        public List<PCAPredictFindResult> Find(string term, SearchFor searchFor, string country, string languagePreference, int? maxSuggestions, int? maxResults)
+        public List<PCAPredictCapturePlusFindResult> Find(string term, SearchFor searchFor, string country, string languagePreference, int? maxSuggestions, int? maxResults)
         {
             return Find(term, null, searchFor, country, languagePreference, maxSuggestions, maxResults);
         }
 
-        public List<PCAPredictFindResult> Find(string term, string lastId, SearchFor searchFor, string country, string languagePreference, int? maxSuggestions, int? maxResults)
+        public List<PCAPredictCapturePlusFindResult> Find(string term, string lastId, SearchFor searchFor, string country, string languagePreference, int? maxSuggestions, int? maxResults)
         {
             var url = string.Format("Find/v{0}/json3.ws", _apiVersion);
 
@@ -58,12 +58,12 @@ namespace MAB.PCAPredict
             req.AddParameter("MaxSuggestions", maxSuggestions.HasValue ? maxSuggestions.Value.ToString() : "");
             req.AddParameter("MaxResults", maxResults.HasValue ? maxResults.Value.ToString() : "");
 
-            var resp = _client.Execute<PCAPredictFindResultList>(req);
+            var resp = _client.Execute<PCAPredictCapturePlusFindResultList>(req);
         
             return resp.Data.Items;
         }
 
-        public List<PCAPredictRetrieveResult> Retrieve(string id)
+        public List<PCAPredictCapturePlusRetrieveResult> Retrieve(string id)
         {
             var url = string.Format("Retrieve/v{0}/json3.ws", _apiVersion);
 
@@ -71,7 +71,7 @@ namespace MAB.PCAPredict
             req.AddParameter("Key", _key);
             req.AddParameter("Id", id);
         
-            var resp = _client.Execute<PCAPredictRetrieveResultList>(req);
+            var resp = _client.Execute<PCAPredictCapturePlusRetrieveResultList>(req);
 
             return resp.Data.Items;
         }
