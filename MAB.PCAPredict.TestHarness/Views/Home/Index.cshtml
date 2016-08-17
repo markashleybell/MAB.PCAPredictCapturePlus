@@ -1,0 +1,20 @@
+﻿@model IndexViewModel
+
+@{
+    ViewBag.Title = "Test Harness";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>MAB.PCAPredict</h1>
+        <p>
+            Enter details into the fields below to search address data:
+        </p>
+        @using(Html.BeginForm())
+        {
+            @Html.EditorForModel()
+
+            <p><br /><button type="submit" class="btn btn-default">Submit</button></p>
+        }
+    </div>
+</div>
