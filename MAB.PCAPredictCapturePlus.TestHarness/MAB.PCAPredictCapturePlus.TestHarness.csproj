@@ -183,8 +183,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MAB.PCAPredictCapturePlus\MAB.PCAPredictCapturePlus.csproj">
-      <Project>{44AB6E2A-6DCB-4549-9609-F15D9478A02F}</Project>
-      <Name>MAB.PCAPredict</Name>
+      <Project>{44ab6e2a-6dcb-4549-9609-f15d9478a02f}</Project>
+      <Name>MAB.PCAPredictCapturePlus</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
