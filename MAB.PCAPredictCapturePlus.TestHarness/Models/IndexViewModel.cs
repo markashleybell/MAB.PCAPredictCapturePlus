@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace MAB.PCAPredict.TestHarness.Models
+namespace MAB.PCAPredictCapturePlus.TestHarness.Models
 {
     public class IndexViewModel
     {

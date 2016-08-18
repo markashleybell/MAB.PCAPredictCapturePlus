@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MAB.PCAPredict.TestHarness.Controllers
+namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
 {
     public class HomeController : Controller
     {
