@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MAB.PCAPredictCapturePlus
+﻿namespace MAB.PCAPredictCapturePlus
 {
-    public class PCAPredictCapturePlusRetrieveResult
+    public class CapturePlusRetrieveItem
     {
         public string Id { get; set; }
         public string DomesticId { get; set; }

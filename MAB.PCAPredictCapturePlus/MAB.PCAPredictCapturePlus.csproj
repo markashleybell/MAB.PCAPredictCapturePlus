@@ -44,11 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PCAPredictCapturePlusClient.cs" />
-    <Compile Include="PCAPredictCapturePlusFindResult.cs" />
-    <Compile Include="PCAPredictCapturePlusFindResultList.cs" />
-    <Compile Include="PCAPredictCapturePlusRetrieveResult.cs" />
-    <Compile Include="PCAPredictCapturePlusRetrieveResultList.cs" />
+    <Compile Include="CapturePlusClient.cs" />
+    <Compile Include="CapturePlusError.cs" />
+    <Compile Include="CapturePlusFindItem.cs" />
+    <Compile Include="CapturePlusFindItemRaw.cs" />
+    <Compile Include="CapturePlusFindResult.cs" />
+    <Compile Include="CapturePlusFindResultList.cs" />
+    <Compile Include="CapturePlusRetrieveItem.cs" />
+    <Compile Include="CapturePlusRetrieveItemRaw.cs" />
+    <Compile Include="CapturePlusRetrieveResult.cs" />
+    <Compile Include="CapturePlusRetrieveResultList.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchFor.cs" />
   </ItemGroup>

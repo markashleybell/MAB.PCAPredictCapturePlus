@@ -1,18 +1,14 @@
-﻿using MAB.PCAPredictCapturePlus;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
 {
     public class HomeController : Controller
     {
-        private PCAPredictCapturePlusClient _client = new PCAPredictCapturePlusClient(
+        private CapturePlusClient _client = new CapturePlusClient(
             apiVersion: "2.10",
-            key: ConfigurationManager.AppSettings["PCAPredictKey"],
+            key: ConfigurationManager.AppSettings["PCAPredictCapturePlusKey"],
             defaultFindCountry: "GBR",
             defaultLanguage: "EN"
         );
@@ -25,7 +21,12 @@ namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
         [HttpPost]
         public ActionResult Find(string term)
         {
-            return Json(_client.Find(term));
+            var result = _client.Find(term);
+
+            if(result.Error != null)
+                return Json(result.Error);
+
+            return Json(result.Items);
         }
 
         [HttpPost]
@@ -33,7 +34,10 @@ namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
         {
             var result = _client.Retrieve(id);
 
-            var model = result.Select(a => new {
+            if(result.Error != null)
+                return Json(result.Error);
+
+            var model = result.Items.Select(a => new {
                 Company = a.Company,
                 BuildingName = a.BuildingName,
                 Street = a.Street,
