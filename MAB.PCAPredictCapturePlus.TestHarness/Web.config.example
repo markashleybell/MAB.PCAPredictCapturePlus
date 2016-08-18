@@ -9,7 +9,7 @@
         <add key="webpages:Enabled" value="false" />
         <add key="ClientValidationEnabled" value="true" />
         <add key="UnobtrusiveJavaScriptEnabled" value="true" />
-        <add key="PCAPredictKey" value="XXXX-XXXX-XXXX-XXXX" />
+        <add key="PCAPredictCapturePlusKey" value="XXXX-XXXX-XXXX-XXXX" />
     </appSettings>
     <system.web>
         <compilation debug="true" targetFramework="4.5" />
