@@ -1,7 +1,12 @@
 ﻿namespace MAB.PCAPredictCapturePlus
 {
+    /// <summary>
+    /// Address data returned by a successful Capture Plus Retrieve query.
+    /// </summary>
     public class CapturePlusRetrieveItem
     {
+        #pragma warning disable 1591
+
         public string Id { get; set; }
         public string DomesticId { get; set; }
         public string Language { get; set; }
@@ -39,5 +44,7 @@
         public string Label { get; set; }
         public string Type { get; set; }
         public string DataLevel { get; set; }
+
+        #pragma warning restore 1591
     }
 }
