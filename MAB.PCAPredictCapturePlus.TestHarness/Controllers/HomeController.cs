@@ -9,7 +9,7 @@ namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
         private CapturePlusClient _client = new CapturePlusClient(
             apiVersion: "2.10",
             key: ConfigurationManager.AppSettings["PCAPredictCapturePlusKey"],
-            defaultFindCountry: "GBR",
+            defaultFindCountry: "GB",
             defaultLanguage: "EN"
         );
 
