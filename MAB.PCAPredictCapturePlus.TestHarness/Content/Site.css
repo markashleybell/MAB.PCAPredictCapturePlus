@@ -25,12 +25,31 @@ textarea {
 
 .mab-pca-predict-capture-plus-suggestions {
     position: absolute;
-    top: -150px;
+    top: -500px;
     left: 0;
-    width: 300px;
-    height: 150px;
+    width: 650px;
+    height: auto;
     overflow: auto;
     background-color: #fff;
     border: solid 1px #e0e0e0;
     border-radius: 4px;
+}
+
+.mab-pca-predict-capture-plus-suggestion {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    border-bottom: solid 1px #e0e0e0;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.mab-pca-predict-capture-plus-suggestion:last-child {
+    border-bottom: none;
+}
+
+.mab-pca-predict-capture-plus-suggestion:hover,
+.mab-pca-predict-capture-plus-suggestion:visited,
+.mab-pca-predict-capture-plus-suggestion:active {
+    text-decoration: none;
 }
