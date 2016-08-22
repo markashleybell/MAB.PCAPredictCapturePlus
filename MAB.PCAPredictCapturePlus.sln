@@ -5,12 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAB.PCAPredictCapturePlus", "MAB.PCAPredictCapturePlus\MAB.PCAPredictCapturePlus.csproj", "{44AB6E2A-6DCB-4549-9609-F15D9478A02F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAB.PCAPredictCapturePlus.TestHarness", "MAB.PCAPredictCapturePlus.TestHarness\MAB.PCAPredictCapturePlus.TestHarness.csproj", "{A9981820-B9C6-429A-B9BB-B027164D51CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "TestHarness\TestHarness.csproj", "{A9981820-B9C6-429A-B9BB-B027164D51CF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD0A0C37-C67E-4ED6-8FD5-07D1090AC4A5}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

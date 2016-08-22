@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness
+namespace TestHarness
 {
     public class BundleConfig
     {

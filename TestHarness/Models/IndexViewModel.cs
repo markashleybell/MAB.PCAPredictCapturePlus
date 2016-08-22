@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness.Models
+namespace TestHarness.Models
 {
     public class IndexViewModel
     {

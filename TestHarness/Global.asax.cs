@@ -2,7 +2,7 @@
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness
+namespace TestHarness
 {
     public class MvcApplication : System.Web.HttpApplication
     {

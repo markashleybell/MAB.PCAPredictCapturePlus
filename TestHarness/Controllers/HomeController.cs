@@ -1,8 +1,9 @@
-﻿using System.Configuration;
+﻿using MAB.PCAPredictCapturePlus;
+using System.Configuration;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness.Controllers
+namespace TestHarness.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness
+namespace TestHarness
 {
     public class FilterConfig
     {

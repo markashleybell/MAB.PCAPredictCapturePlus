@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MAB.PCAPredictCapturePlus.TestHarness
+namespace TestHarness
 {
     public class RouteConfig
     {
