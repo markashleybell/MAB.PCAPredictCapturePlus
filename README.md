@@ -1,11 +1,15 @@
 # MAB.PCAPredictCapturePlus
-A .NET client for the [PCA Predict Capture Plus][1] address search API.
+A .NET client library for the [PCA Predict Capture Plus][1] address search API.
 
 This is a basic wrapper around the [Capture Plus web services][2], which maps the JSON responses to .NET classes. 
 
 It *doesn't* include a client-side JavaScript implementation of the Capture Plus UI, as I figured the main reason people would use this library would be to implement a custom UI; however, there is a [basic implementation][3]  included in the test harness project which you are welcome to use as a starting point.
 
 Please feel free to submit issues or pull requests as neccessary!
+
+## Disclaimer
+
+**This is not an official library.** I am not in any way affiliated with Postcode Anywhere Ltd or the PCA Predict service (other than being a user of the service).
 
 ## Example code
 
