@@ -23,7 +23,7 @@ gulp.task('nuget-clean', function (callback) {
 });
 
 gulp.task('nuget-pack', ['nuget-clean'], function (callback) {
-    exec('nuget pack MAB.PCAPredictCapturePlus.csproj -OutputDirectory ' + distFolder + ' -Prop Configuration=Release', { cwd: projectFolder }, function (err, stdout, stderr) {
+    exec('nuget pack MAB.PCAPredictCapturePlus.csproj -Symbols -OutputDirectory ' + distFolder + ' -Prop Configuration=Release', { cwd: projectFolder }, function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         callback(err);
