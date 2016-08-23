@@ -11,6 +11,10 @@ Please feel free to submit issues or pull requests as neccessary!
 
 **This is not an official library.** I am not in any way affiliated with Postcode Anywhere Ltd or the PCA Predict service (other than being a user of the service).
 
+## Installation
+
+Installation of the [MAB.PCAPredictCapturePlus NuGet package][4] is recommended, as this will always be kept up to date with the latest stable version. The easiest way is just to search for `MAB.PCAPredictCapturePlus` from within the Visual Studio Package Explorer.
+
 ## Example code
 
 ### Get address suggestions
@@ -77,3 +81,4 @@ else
 [1]: http://www.pcapredict.com/en-gb/address-capture-software/
 [2]: http://www.pcapredict.com/Support/WebService/ServicesList/CapturePlus
 [3]: https://github.com/markashleybell/MAB.PCAPredictCapturePlus/blob/master/MAB.PCAPredictCapturePlus.TestHarness/Scripts/main.js
+[4]: https://www.nuget.org/packages/MAB.PCAPredictCapturePlus
