@@ -4,10 +4,9 @@
     {
         // For successful results
         public string Id { get; set; }
+        public string Type { get; set; }
         public string Text { get; set; }
         public string Highlight { get; set; }
-        public int Cursor { get; set; }
-        public string Next { get; set; }
 
         // Used by both error and successful results
         public string Description { get; set; }

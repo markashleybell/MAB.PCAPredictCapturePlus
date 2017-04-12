@@ -53,6 +53,7 @@
     <Compile Include="CapturePlusFindResultList.cs" />
     <Compile Include="CapturePlusRetrieveItem.cs" />
     <Compile Include="CapturePlusRetrieveItemRaw.cs" />
+    <Compile Include="CapturePlusFindItemType.cs" />
     <Compile Include="CapturePlusRetrieveResult.cs" />
     <Compile Include="CapturePlusRetrieveResultList.cs" />
     <Compile Include="Extensions.cs" />

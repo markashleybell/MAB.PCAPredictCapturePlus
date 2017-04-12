@@ -14,20 +14,31 @@ void Main()
 {
     var key = ConfigurationManager.AppSettings["PCAPredictCapturePlusKey"];
 
-    var client = new CapturePlusClient("2.10", key, "GBR", "EN");
+    var client = new CapturePlusClient("1.00", key, "GB", "EN");
     
-    var findResults = client.Find("WR5 3DA");
+    var postcodeFindResults = client.Find("WR5 3DA");
     
-	if (findResults.Error != null)
+	if (postcodeFindResults.Error != null)
 	{
-		findResults.Error.Dump();
+		postcodeFindResults.Error.Dump();
 	}
 	else
 	{
-		findResults.Items.Dump();
+		postcodeFindResults.Items.Dump();
 	}
 	
-    var retrieveResults = client.Retrieve("GBR|52509479");
+    var addressFindResults = client.Find(null, "GB|RM|ENG|3DA-WR5");
+    
+	if (addressFindResults.Error != null)
+	{
+		addressFindResults.Error.Dump();
+	}
+	else
+	{
+		addressFindResults.Items.Dump();
+	}
+    
+    var retrieveResults = client.Retrieve("GB|RM|A|52509479");
 
 	if (retrieveResults.Error != null)
 	{

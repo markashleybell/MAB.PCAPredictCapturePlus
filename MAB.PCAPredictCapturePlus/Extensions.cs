@@ -37,12 +37,30 @@ namespace MAB.PCAPredictCapturePlus
 
         internal static IEnumerable<CapturePlusFindItem> MapResults(this IEnumerable<CapturePlusFindItemRaw> results)
         {
-            return results.Select(r => new CapturePlusFindItem {
-                Id = r.Id,
-                Text = r.Text,
-                Highlight = r.Highlight,
-                Cursor = r.Cursor,
-                Next = r.Next
+            return results.Select(r => {
+                var type = CapturePlusFindItemType.Unknown;
+                switch(r.Type)
+                {
+                    case "Address":
+                        type = CapturePlusFindItemType.Address;
+                        break;
+                    case "Postcode":
+                        type = CapturePlusFindItemType.Postcode;
+                        break;
+                    case "Locality":
+                        type = CapturePlusFindItemType.Locality;
+                        break;
+                    default:
+                        type = CapturePlusFindItemType.Unknown;
+                        break;
+                }
+                return new CapturePlusFindItem {
+                    Id = r.Id,
+                    Type = type,
+                    Text = r.Text,
+                    Highlight = r.Highlight,
+                    Description = r.Description
+                };
             });
         }
 
