@@ -1,7 +1,14 @@
 ﻿var App = (function() {
     "use strict";
 
-    var _resultHtml = '<a href="#" class="mab-pca-predict-capture-plus-suggestion" data-id="{{id}}" data-text="{{text}}" data-next="{{next}}">{{text}}</a>';
+    var ResultType = Object.freeze({
+        Unknown: 0,
+        Address: 1,
+        Postcode: 2,
+        Locality: 3
+    });
+
+    var _resultHtml = '<a href="#" class="mab-pca-predict-capture-plus-suggestion" data-id="{{id}}" data-type="{{type}}">{{text}}, {{description}}</a>';
 
     var _ui = {
         console: null,
@@ -81,15 +88,18 @@
         request.send(_queryString(data));
     }
 
-    function _renderSuggestion(id, text, next) {
-        return _resultHtml.replace(/{{id}}/g, id).replace(/{{text}}/g, text).replace(/{{next}}/g, next);
+    function _renderSuggestion(id, text, description, type) {
+        return _resultHtml.replace(/{{id}}/g, id)
+                          .replace(/{{text}}/g, text)
+                          .replace(/{{description}}/g, description)
+                          .replace(/{{type}}/g, type);
     }
 
     function _renderSuggestions(data) {
         var suggestions = [];
         for(var i = 0; i < data.length; i++) {
             var result = data[i];
-            suggestions.push(_renderSuggestion(result.Id, result.Text, result.Next));
+            suggestions.push(_renderSuggestion(result.Id, result.Text, result.Description, result.Type));
         }
         return suggestions.join('');
     }
@@ -113,16 +123,14 @@
 
     function _handleSuggestionClick(container, a) {
         var input = container.getAttribute('data-input');
-        var next = a.getAttribute('data-next');
+        var id = a.getAttribute('data-id');
+        var type = parseInt(a.getAttribute('data-type'), 10);
 
-        if(next === 'Find') {
-            var term = a.getAttribute('data-text');
-            _ui.inputs[input].value = term;
-            _search(term, function(data) {
+        if(type !== ResultType.Address) {
+            _search('/Home/FindByContainer', id, function (data) {
                 _ui.suggestions.innerHTML = _renderSuggestions(data);
             });
         } else {
-            var id = a.getAttribute('data-id');
             _ajaxPost('/Home/Retrieve', { id: id }, function(data) {
                 _forEachPropertyOf(_options.fields, function(k, v) {
                     _ui.inputs[k].value = data[k];
@@ -135,8 +143,8 @@
         }
     }
 
-    function _search(term, resultCallback, noresultCallback, errorCallback) {
-        _ajaxPost('/Home/Find', { term: term }, function(data) { 
+    function _search(url, text, resultCallback, noresultCallback, errorCallback) {
+        _ajaxPost(url, { text: text }, function (data) {
             if(data.length) {
                 resultCallback(data);
             } else {
@@ -161,7 +169,7 @@
                     if(_isEmpty(term)) {
                         _hideSuggestionDropdown(_ui.suggestions);
                     } else {
-                        _search(term, function(data) {
+                        _search('/Home/Find', term, function(data) {
                             _ui.suggestions.innerHTML = _renderSuggestions(data);
                             _positionSuggestionDropdown(input, _ui.suggestions);
                             _setSuggestionInput(_ui.suggestions, input.id);

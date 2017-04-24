@@ -8,7 +8,7 @@ namespace TestHarness.Controllers
     public class HomeController : Controller
     {
         private CapturePlusClient _client = new CapturePlusClient(
-            apiVersion: "2.10",
+            apiVersion: "1.00",
             key: ConfigurationManager.AppSettings["PCAPredictCapturePlusKey"],
             defaultCountries: "GB",
             defaultLanguage: "EN"
@@ -20,11 +20,22 @@ namespace TestHarness.Controllers
         }
 
         [HttpPost]
-        public ActionResult Find(string term)
+        public ActionResult Find(string text)
         {
-            var result = _client.Find(term);
+            var result = _client.Find(text);
 
             if(result.Error != null)
+                return Json(result.Error);
+
+            return Json(result.Items);
+        }
+
+        [HttpPost]
+        public ActionResult FindByContainer(string text)
+        {
+            var result = _client.Find(null, text);
+
+            if (result.Error != null)
                 return Json(result.Error);
 
             return Json(result.Items);
