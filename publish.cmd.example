@@ -1,0 +1,1 @@
+nuget push dist\*.nupkg NUGET_API_KEY_HERE -Source https://www.nuget.org/api/v2/package
