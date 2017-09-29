@@ -256,6 +256,6 @@ paket-files/
 .cr/
 
 # Project-specific ignores
-REPL.config
+tools/REPL.config
 TestHarness/Web.config
 publish.cmd

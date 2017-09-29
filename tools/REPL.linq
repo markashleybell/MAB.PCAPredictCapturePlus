@@ -1,12 +1,12 @@
 <Query Kind="Program">
-  <Reference Relative="MAB.PCAPredictCapturePlus\bin\Debug\MAB.PCAPredictCapturePlus.dll">C:\Src\MAB.PCAPredictCapturePlus\MAB.PCAPredictCapturePlus\bin\Debug\MAB.PCAPredictCapturePlus.dll</Reference>
+  <Reference Relative="..\MAB.PCAPredictCapturePlus\bin\Debug\MAB.PCAPredictCapturePlus.dll">E:\Src\MAB.PCAPredictCapturePlus\MAB.PCAPredictCapturePlus\bin\Debug\MAB.PCAPredictCapturePlus.dll</Reference>
   <Reference>&lt;RuntimeDirectory&gt;\System.Configuration.dll</Reference>
   <Reference>&lt;RuntimeDirectory&gt;\System.Security.dll</Reference>
   <Namespace>MAB.PCAPredictCapturePlus</Namespace>
   <Namespace>System.Configuration</Namespace>
   <Namespace>System.Net</Namespace>
   <AppConfig>
-    <Path Relative="REPL.config">C:\Src\MAB.PCAPredictCapturePlus\REPL.config</Path>
+    <Path Relative="REPL.config">E:\Src\MAB.PCAPredictCapturePlus\tools\REPL.config</Path>
   </AppConfig>
 </Query>
 
