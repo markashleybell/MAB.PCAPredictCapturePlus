@@ -111,5 +111,5 @@ Console.WriteLine($"{e.Resolution}");
 
 [1]: https://www.pcapredict.com/en-gb/address-capture-software/
 [2]: https://www.pcapredict.com/support/webservice/serviceslist/capture
-[3]: https://github.com/markashleybell/MAB.PCAPredictCapturePlus/blob/master/MAB.PCAPredictCapturePlus.TestHarness/Scripts/main.js
+[3]: https://github.com/markashleybell/MAB.PCAPredictCapturePlus/blob/master/TestHarness/Scripts/main.js
 [4]: https://www.nuget.org/packages/MAB.PCAPredictCapturePlus
