@@ -100,12 +100,14 @@ var badPostcodeFindResults = badClient.Find("WR5 3DA");
 // with error code, description, cause and resolution
 var e = badPostcodeFindResults.Error;
 
-Console.WriteLine($"Error {e.Error} ({e.Description}): {e.Cause} {e.Resolution}");
+Console.WriteLine($"Error {e.Error} ({e.Description}): {e.Cause}");
+Console.WriteLine($"{e.Resolution}");
 ```
 
 #### Output:
 
-    Error 2 (Unknown key): The key you are using to access the service was not found. Please check that the key is correct. It should be in the form AA11-AA11-AA11-AA11.
+    Error 2 (Unknown key): The key you are using to access the service was not found.
+    Please check that the key is correct. It should be in the form AA11-AA11-AA11-AA11.
 
 [1]: https://www.pcapredict.com/en-gb/address-capture-software/
 [2]: https://www.pcapredict.com/support/webservice/serviceslist/capture

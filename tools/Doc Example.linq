@@ -63,5 +63,6 @@ void Main()
     // with error code, description, cause and resolution
     var e = badPostcodeFindResults.Error;
     
-    Console.WriteLine($"Error {e.Error} ({e.Description}): {e.Cause} {e.Resolution}");
+    Console.WriteLine($"Error {e.Error} ({e.Description}): {e.Cause}");
+    Console.WriteLine($"{e.Resolution}");
 }
