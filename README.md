@@ -1,8 +1,10 @@
 # MAB.PCAPredictCapturePlus
 
+[![NuGet](https://img.shields.io/nuget/v/MAB.PCAPredictCapturePlus.svg)](https://www.nuget.org/packages/MAB.PCAPredictCapturePlus/)
+
 A .NET client library for the [PCA Predict Capture Plus][1] address search API.
 
-This is a basic wrapper around the [Capture Plus web services][2], which maps the JSON responses to .NET classes. 
+This is a basic wrapper around the [Capture Plus web services][2], which maps the JSON responses to .NET classes.
 
 It *doesn't* include a client-side JavaScript implementation of the Capture Plus UI, as I figured the main reason people might use this library would be to implement a custom UI; however, there is a [basic implementation][3] included in the test harness project which you are welcome to use as a starting point.
 
