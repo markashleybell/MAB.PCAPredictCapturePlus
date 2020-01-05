@@ -1,3 +1,11 @@
+# This library is no longer maintained!
+
+PCA Predict is now [Loqate](https://www.loqate.com/en-gb/); as a result, all the API URLs used by this library have changed, the name no longer makes sense, etc. 
+
+I'm leaving the code here for reference as it could potentially be used as the basis for a new library based around the new Loqate APIs, but no further changes will be incorporated.
+
+---
+
 # MAB.PCAPredictCapturePlus
 
 [![NuGet](https://img.shields.io/nuget/v/MAB.PCAPredictCapturePlus.svg)](https://www.nuget.org/packages/MAB.PCAPredictCapturePlus/)
